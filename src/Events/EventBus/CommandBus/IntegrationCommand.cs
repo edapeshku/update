@@ -1,0 +1,30 @@
+namespace eSupport.Events.CommandBus
+{
+    public abstract class IntegrationCommand
+    {
+        public Guid Id { get ;}
+
+        public DateTime Sent { get; }
+
+        public abstract object GetDataAsObject();
+
+        protected IntegrationCommand()
+        {
+            Id = Guid.NewGiud();
+            Sent = DateTime.UtcNow;
+        }
+    }
+
+    public class IntegrationCommand<T> : IntegrationCommand
+    {
+        public T Data { get; }
+        public string Name { get; }
+        public override object GetDataAsObject() => Data;
+
+        public IntegrationCommand(string name, T data) : base()
+        {
+            Data = data;
+            Name = name;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+version: '3.3'
+
+services:
+
+  client.api:
+    image: esupport/client.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Client/Client.API/Dockerfile    
+    depends_on:
+      - client.data
+      - user.api
+      - rabbitmq
+
+  equipment.api:
+    image: esupport/equipment.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Equipment/Equipment.API/Dockerfile
+    depends_on:
+      - sql.data
+      - rabbitmq
+
+  invoice.api:
+    image: esupport/invoice.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Invoice/Invoice.API/Dockerfile
+    depends_on:
+      - sql.data
+      - rabbitmq
+      - nosql.data
+
+  notification.api:
+    image: esupport/notification.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Notification/Notification.API/Dockerfile
+    depends_on:
+      - sql.data
+      - rabbitmq
+
+  user.api:
+    image: esupport/user.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/User/User.API/Dockerfile    
+    depends_on:
+      - sql.data
+
+  solution.api:
+    image: esupport/solution.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Solution/Solution.API/Dockerfile    
+    depends_on:
+      - sql.data
+      - nosql.data
+      - rabbitmq
+      - user.api
+
+  ticket.api:
+    image: esupport/maticketrketing.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Ticket/Ticket.API/Dockerfile    
+    depends_on:
+      - sql.data
+      - nosql.data
+      - user.api
+      - rabbitmq
+
+  webmvc:
+    image: esupport/webmvc:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Web/Dockerfile    
+    depends_on:
+      - solution.api
+      - notification.api
+      - user.api
+      - client.api
+      - ticket.api
+      - invoice.api
+      - equipment.api
+
+  application:
+    image: esupport/application:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Application/Dockerfile    
+    depends_on:
+      - solution.api
+      - notification.api
+      - user.api
+      - client.api
+      - ticket.api
+      - invoice.api
+      - equipment.api
+    
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+
+  nosql.data:
+    image: mongo
+
+  basket.data:
+    image: redis:alpine
+      
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
