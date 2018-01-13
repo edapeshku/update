@@ -1,4 +1,4 @@
-namespace Client.API.Models
+namespace eSupport.Services.Client.API.Models
 {
     public class Client
     {

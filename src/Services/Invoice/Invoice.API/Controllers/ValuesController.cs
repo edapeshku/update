@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Invoice.API.Controllers
+namespace eSupport.Services.Invoice.API.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
