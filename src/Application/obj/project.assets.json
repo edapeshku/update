@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/olti/Projects/c#/eSupport/Application/Application.csproj",
+      "projectUniqueName": "/home/olti/Projects/c#/eSupport/src/Application/Application.csproj",
       "projectName": "Application",
-      "projectPath": "/home/olti/Projects/c#/eSupport/Application/Application.csproj",
+      "projectPath": "/home/olti/Projects/c#/eSupport/src/Application/Application.csproj",
       "packagesPath": "/home/olti/.nuget/packages/",
-      "outputPath": "/home/olti/Projects/c#/eSupport/Application/obj/",
+      "outputPath": "/home/olti/Projects/c#/eSupport/src/Application/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
