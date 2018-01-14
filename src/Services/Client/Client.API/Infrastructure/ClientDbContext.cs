@@ -1,4 +1,4 @@
-namespace Client.API.Data
+namespace eSupport.Services.Client.API.Infrastructure
 {
     public class ClientDbContext
     {
