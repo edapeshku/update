@@ -331,7 +331,7 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
-      "Polly/5.6.1": {
+      "Polly/5.7.0": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -2298,10 +2298,10 @@
         "tools/install.ps1"
       ]
     },
-    "Polly/5.6.1": {
-      "sha512": "Zm6mTvN9qk1wJ5hIqQ6ogJvYFRFyzyprRLTR6cNvvGn+jKwSM0wu0pZpZU/kNubYdiXtMNju6DL+/ILS7UaYlg==",
+    "Polly/5.7.0": {
+      "sha512": "MpWBzuzoO+J6MxaHJ5KuCk0KEVKZrlkg7xlkCl11rIU8D5h2m/4zdU2GtrQsc4dR6OHiFyh3w78Eyxt0mZ2RwQ==",
       "type": "package",
-      "path": "polly/5.6.1",
+      "path": "polly/5.7.0",
       "files": [
         "lib/net45/Polly.dll",
         "lib/net45/Polly.pdb",
@@ -2310,7 +2310,7 @@
         "lib/netstandard1.1/Polly.dll",
         "lib/netstandard1.1/Polly.pdb",
         "lib/netstandard1.1/Polly.xml",
-        "polly.5.6.1.nupkg.sha512",
+        "polly.5.7.0.nupkg.sha512",
         "polly.nuspec"
       ]
     },
@@ -5727,7 +5727,7 @@
       "Microsoft.Extensions.Logging >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Newtonsoft.Json >= 10.0.3",
-      "Polly >= 5.6.1",
+      "Polly >= 5.7.0",
       "RabbitMQ.Client >= 5.0.1",
       "System.ValueTuple >= 4.4.0"
     ]
@@ -5795,7 +5795,7 @@
           },
           "Polly": {
             "target": "Package",
-            "version": "5.6.1"
+            "version": "5.7.0"
           },
           "RabbitMQ.Client": {
             "target": "Package",
