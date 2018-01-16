@@ -104,7 +104,7 @@ services:
   nosql.data:
     image: mongo
 
-  basket.data:
+  ticket.data:
     image: redis:alpine
       
   rabbitmq:
