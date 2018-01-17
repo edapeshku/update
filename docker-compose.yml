@@ -12,6 +12,17 @@ services:
       - user.api
       - rabbitmq
 
+  email.api:
+    image: esupport/email.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Email/Email.API/Dockerfile    
+    depends_on:
+      - email.data
+      - user.api
+      - rabbitmq
+
+
   equipment.api:
     image: esupport/equipment.api:${TAG:-latest}
     build:
@@ -38,6 +49,7 @@ services:
       dockerfile: src/Services/Notification/Notification.API/Dockerfile
     depends_on:
       - sql.data
+      - nosql.data
       - rabbitmq
 
   user.api:
@@ -79,6 +91,7 @@ services:
       - solution.api
       - notification.api
       - user.api
+      - email.api
       - client.api
       - ticket.api
       - invoice.api
@@ -105,6 +118,9 @@ services:
     image: mongo
 
   ticket.data:
+    image: redis:alpine
+
+  email.data:
     image: redis:alpine
       
   rabbitmq:
