@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ElectronNET.API;
+using ElectronNET.API.Entities;
 
 namespace Application
 {
@@ -44,6 +46,8 @@ namespace Application
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using ElectronNET.API;
 
 namespace Application
 {
@@ -19,6 +20,7 @@ namespace Application
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseElectron(args)
                 .UseStartup<Startup>()
                 .Build();
     }

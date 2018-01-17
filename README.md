@@ -19,6 +19,60 @@ The Web part is the portal of the eSupport System where the client can view the 
 The logic is based on Events, EventBus and other tools, using the concepts of DDD
 
 
+## Run Application
+
+Under the Application Folder run the follwoing command:
+```
+dotnet restore
+```
+
+Make sure you have node.js v8.6.0 and on macOS/Linux the electron-packager installed!
+```
+sudo npm install electron-packager --global
+```
+
+At the first time, you need an Electron.NET project initialization. Type the following command in your ASP.NET Core folder:
+```
+dotnet electronize init
+```
+
+Now a electronnet.manifest.json should appear in your ASP.NET Core project
+After the generation run the following:
+```    
+dotnet electronize start
+```
+
+Enjoy the Electron Application Demo Part 1! :D
+
+## Run Web
+Under the Web Folder run the follwoing command:
+```
+npm install
+```
+
+Make sure you have @angular/cli installed!
+
+```
+sudo npm install @angular/cli@latest --global
+```
+and 
+```
+sudo npm install --save-dev @angular/cli@latest
+```
+
+At the first time, you need an restore of .NET Core libraries. Type the following command in your ASP.NET Core folder:
+```
+dotnet restore
+```
+
+Now we are ready to view the app running the following command:
+```    
+dotnet run
+```
+
+Enjoy the Web Demo Part 1! :D
+
+
 The **dockerfiles** in the solution have also been updated and now support [**Docker Multi-Stage**](https://blogs.msdn.microsoft.com/stevelasker/2017/09/11/net-and-multistage-dockerfiles/) since mid-December 2017.
 
 **Architecture overview**: 
