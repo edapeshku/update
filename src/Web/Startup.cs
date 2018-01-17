@@ -19,6 +19,15 @@ namespace Web
 
         public IConfiguration Configuration { get; }
 
+        private IHostingEnvironment _hostingEnvironment;
+        public Startup(IHostingEnvironment env)
+        {
+            _hostingEnvironment = env;
+
+            var localPath = new Uri(Configuration["ASPNETCORE_URLS"])?.LocalPath ?? "/";
+            Configuration["BaseUrl"] = localPath;
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -53,6 +62,11 @@ namespace Web
                     name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
             });
+        }
+
+        private void RegisterAppInsights(IServiceCollection service)
+        {
+            
         }
     }
 }

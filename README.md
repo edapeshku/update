@@ -1,5 +1,5 @@
-# eSuuport - Microservices Architecture and Containers
-eSuuport .NET Core reference application
+# eSupport - Microservices Architecture and Containers
+eSupport .NET Core reference application
 
 **Note Visual Studio 2017 version required**: Please, use VS 2017 15.5 or later. 
 
