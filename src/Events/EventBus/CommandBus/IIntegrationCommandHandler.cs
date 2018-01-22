@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eSupport.Events.CommandBus
+namespace eSupport.Events.EventBus.CommandBus
 {
     public interface IIntegrationCommandHandler
     {

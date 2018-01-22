@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ElectronNET_API_Demos.Controllers
+namespace eSupport.Application.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,4 +1,8 @@
-namespace eSupport.Events.CommandBus
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace eSupport.Events.EventBus.CommandBus
 {
     public abstract class IntegrationCommand
     {
@@ -10,7 +14,7 @@ namespace eSupport.Events.CommandBus
 
         protected IntegrationCommand()
         {
-            Id = Guid.NewGiud();
+            Id = Guid.NewGuid();
             Sent = DateTime.UtcNow;
         }
     }

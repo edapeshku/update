@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eSupport.Events.CommnadBus
+namespace eSupport.Events.EventBus.CommnadBus
 {
     public interface ICommandBus
     {

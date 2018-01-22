@@ -1,3 +1,7 @@
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
 namespace eSupport.Services.User.API.Model
 {
     public class User

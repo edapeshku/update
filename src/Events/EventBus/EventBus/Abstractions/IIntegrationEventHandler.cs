@@ -1,5 +1,5 @@
 using eSupport.Events.EventBus.Events;
-using System.Threading.Task;
+using System.Threading.Tasks;
 
 namespace eSupport.Events.EventBus.Abstractions
 {
