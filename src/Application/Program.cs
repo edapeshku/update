@@ -22,17 +22,17 @@ namespace Application
             WebHost.CreateDefaultBuilder(args)
                 .UseElectron(args)
                 .UseStartup<Startup>()
-                .ConfigureAppConfiguration((builderContext, config) =>
-                {
-                    config.AddEnvironmentVariables();
-                })
-                .ConfigureLogging((hostingContext, builder) =>
-                {
-                    builder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
-                    builder.AddConsole();
-                    builder.AddDebug();
-                })
-                .UseApplicationInsights()
+                // .ConfigureAppConfiguration((builderContext, config) =>
+                // {
+                //     config.AddEnvironmentVariables();
+                // })
+                // .ConfigureLogging((hostingContext, builder) =>
+                // {
+                //     builder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                //     builder.AddConsole();
+                //     builder.AddDebug();
+                // })
+                // .UseApplicationInsights()
                 .Build();
     }
 }
