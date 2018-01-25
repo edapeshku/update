@@ -1,4 +1,6 @@
-namespace Application.Infrastructure
+
+
+namespace eSupport.Application.Infrastructure
 {
     public interface IResilientHttpClientFactory
     {

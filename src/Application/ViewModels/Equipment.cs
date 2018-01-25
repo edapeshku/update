@@ -1,16 +1,18 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace eSupport.Application.ViewModels
 {
-    public class Email
+    public class Equipment
     {
         public int PageIndex { get; set; }
+        
         public int PageSize { get; set; }
+        
         public int Count { get; set; }
-
-        public List<EmailItem> Emails { get; set; }
+        
+        public List<EquipmentItem> Equipments { get; set; }
     }
 }
