@@ -38,4 +38,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <!-- Load the Common config -->
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Resilience\Resilience.Http\Resilience.Http.csproj" />
+  </ItemGroup>
 </Project>
