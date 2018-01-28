@@ -1,6 +1,6 @@
 using System;
 
-namespace eSupport.Services.Equipment.API.Infrastructure.Exceptions
+namespace eSupport.Services.Equipment.Domain.Exceptions
 {
     public class EquipmentDomainException : Exception
     {
