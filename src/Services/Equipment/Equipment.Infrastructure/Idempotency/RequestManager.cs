@@ -7,9 +7,9 @@ namespace eSupport.Services.Equipment.Infrastructure.Idempotency
 {
      public class RequestManager : IRequestManager
     {
-        private readonly EqupmentContext _context;
+        private readonly EquipmentContext _context;
 
-        public RequestManager(EqupmentContext context)
+        public RequestManager(EquipmentContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
